@@ -2,6 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 import NotFound404 from '../Components/NotFound404'
 import ArtistContainer from '../Containers/ArtistsContainer'
+import UserInput from '../Components/UserInput';
+import DogsReadContainer from '../Containers/DogsContainer'
 
 class App extends React.Component {
 
@@ -10,7 +12,8 @@ class App extends React.Component {
             <Switch>
                 <Route exact path='/' component={ArtistContainer}/>
                 <Route path='/artists' component={ArtistContainer}/>
-                <Route path='/userInput' />
+                <Route path='/userInput' component={UserInput}/>
+                <Route path='/dogs' component={DogsReadContainer}/>
                 <Route component={NotFound404} />
             </Switch>
         )
