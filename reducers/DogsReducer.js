@@ -1,4 +1,23 @@
-const initState = { dogs: ['chow chow', 'golden retriever', 'samoyed', 'german shepard'], favourite: null }
+const initState = { 
+    favourite: null,
+    dogs: [
+    {
+        id: 1,
+        name: 'chow chow'
+    },
+    {
+        id: 2,
+        name: 'golden retriever'
+    },
+    {
+        id: 3,
+        name: 'samoyed'
+    },
+    {
+        id: 4,
+        name: 'german shepard'
+    }
+]}
 
 const dogsReducer = (state=initState, action) => {
 
