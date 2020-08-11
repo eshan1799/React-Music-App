@@ -15,7 +15,6 @@ module.exports = {
     rules: [ // instructions for the modules/helpers
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ }, // transpile JSX files
       { test: /\.css$/, loader: ['style-loader', 'css-loader'] }, // transpile css files
-      { test: /\.s(a|c)ss$/, loader: ['style-loader', 'css-loader', 'sass-loader'] } // transpile sass/scss files
     ]
   },
   devServer: { // instructions for the development server
@@ -23,7 +22,7 @@ module.exports = {
     hot: true, // refresh the browser when changes are saved
     open: true, // open the app/project in the browser when the server starts
     port: 8000, // use this port for the server
-    host: '0.0.0.0', // server is accessible externally
+    host: 'localhost', // server is accessible externally
     historyApiFallback: true, //serve a previous page on a 404 error
     watchContentBase: true // watch for changes to static files
   },
