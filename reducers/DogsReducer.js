@@ -31,10 +31,16 @@ const dogsReducer = (state=initState, action) => {
         return { ...state, favourite: favDog }
 
         case 'UPDATE_A_DOG':
-            const dogToUpdate = state.dogs.find( d => d.id === action.payload.id);
-            const index = state.dogs.indexOf(dogToUpdate);
-            const updatedDogs = [ ...state.dogs.slice(0, index), action.payload, ...state.dogs.slice(index + 1, state.dogs.length - 1) ]
+            const dogToUpdateID = state.dogs.find( d => d.id === action.payload.id);
+            const dogToUpdateIndex = state.dogs.indexOf(dogToUpdateID);
+            const updatedDogs = [ ...state.dogs.slice(0, dogToUpdateIndex), action.payload, ...state.dogs.slice(dogToUpdateIndex + 1, state.dogs.length - 1) ]
         return { ...state, dogs: updatedDogs }
+
+        case 'DELETE_A_DOG':
+            const dogToDeleteID = state.dogs.find( d => d.id === action.payload.id);
+            const dogToDeleteIndex = state.dogs.indexOf(dogToDeleteID);
+            const deletedDogs = [ ...state.dogs.slice(0, dogToDeleteIndex), ...state.dogs.slice(dogToDeleteIndex + 1) ];
+            return { ...state, dogs: deletedDogs }
 
         default:
             return state 
