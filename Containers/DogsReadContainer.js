@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Component } from 'react';
 
 class DogsReadContainer extends Component {
     render() {
