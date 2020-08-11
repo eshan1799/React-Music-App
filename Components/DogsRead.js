@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-class DogsReadContainer extends Component {
+class DogsRead extends Component {
     render() {
         return (
             <ul>
@@ -13,4 +13,4 @@ class DogsReadContainer extends Component {
 
 const mSTP = state => ({ allDogs: state.dogs })
 
-export default connect(mSTP)(DogsReadContainer)
+export default connect(mSTP)(DogsRead)

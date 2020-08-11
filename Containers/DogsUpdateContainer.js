@@ -7,7 +7,7 @@ class DogsWriteContainer extends Component {
         return (
             <ul>
                 <li onClick={() => this.props.selectAsFave(3)}>Samoyed</li>
-                <li onClick={() => this.props.selectAsFave(2)}>Samoyed</li>
+                <li onClick={() => this.props.selectAsFave(2)}>Golden Retriever</li>
             </ul>
         )
     }
